@@ -1,0 +1,26 @@
+body{
+    overflow-x: hidden;
+}
+.tabs .tab a{
+    color: #1A237E;
+}
+.tabs .tab a.active {
+    background-color: transparent;
+    color: #1A237E;
+}
+.tabs .indicator{
+    background-color: #1A237E;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+    background-color: rgba(183, 178, 246, 0.2);
+}
+
+.tabs .tab a:hover{
+    color: rgb(23, 116, 255);
+}
+
+#tabStyle{
+    position: relative;
+    top: -2px;
+    padding: 0;
+}
