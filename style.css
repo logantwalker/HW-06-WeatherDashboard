@@ -24,3 +24,17 @@ body{
     top: -2px;
     padding: 0;
 }
+
+input[type=text]:not(.browser-default):focus:not([readonly]){
+    border-bottom: 1px solid #1A237E;
+    box-shadow: 0 1px 0 0 #1A237E;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label{
+    color: #1A237E;
+}
+
+input.valid[type=text]:not(.browser-default){
+    border-bottom: 1px solid #1A237E;
+    box-shadow: 0 1px 0 0 #1A237E;
+}
