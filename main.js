@@ -2,7 +2,10 @@ import { initTab, querySubmit } from './modules/weatherData.js';
 
 initTab();
 
-$('#search').on('change',querySubmit);
+$('#search').on('change',()=>{
+    
+    querySubmit();
+});
 
 
 //initializing materialize css styling
