@@ -10,6 +10,7 @@ class Location{
     }
 }
 
+
 let locations = [];
 
 
@@ -190,8 +191,6 @@ function populateWeatherTab(location){
     getIcon(location);
     
     //current weather conditions
-    
-
     //the current weather api doesnt have uvi and 5 day forecast, but it does have lat/long data,
     //which we will use to make a call to OneCallAPI 
     const oneCall = (data) =>{
@@ -266,8 +265,8 @@ function populateWeatherTab(location){
                 $(`#${name}-${mm}${dd}${yyyy}-card`).append(`<h5>${nextDateText}</h5>`)
                 $(`#${name}-${mm}${dd}${yyyy}-card`).append(`<img src='http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png'>`);
 
-                $(`#${name}-${mm}${dd}${yyyy}-card`).append(`<p><span class='dayTemp' style='color:#ffffff;'>${data.daily[i].temp.day}&#x2109;</span><span style='color:#c0c0c0;'> ${data.daily[i].temp.night}&#x2109;</span></p>`)
-
+                $(`#${name}-${mm}${dd}${yyyy}-card`).append(`<p><span class='dayTemp' style='color:#ffffff;'>${data.daily[i].temp.day}&#x2109;</span><span style='color:#c0c0c0;'> ${data.daily[i].temp.night}&#x2109;</span></p>`);
+                $(`#${name}-${mm}${dd}${yyyy}-card`).append(`<p>Humidity: ${data.daily[i].humidity}%</p>`)
             }
 
 
