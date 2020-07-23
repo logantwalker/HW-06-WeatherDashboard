@@ -253,7 +253,7 @@ function populateWeatherTab(location){
             let nextDate;
             let nextDateText;
             for(let i=1; i<6; i++){
-                console.log(nextDateText)
+                
                 nextDate = new Date(data.daily[i].dt*1000);
                 let mm = nextDate.getMonth()+1;
                 let dd = nextDate.getDate();
