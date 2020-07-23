@@ -3,8 +3,9 @@ import { initTab, querySubmit } from './modules/weatherData.js';
 initTab();
 
 $('#search').on('change',()=>{
-    
+
     querySubmit();
+    
 });
 
 
