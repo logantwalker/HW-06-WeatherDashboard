@@ -36,7 +36,7 @@ export function initTab(){
         }
 
         $.ajax({
-            url: `http://${queryURL}`
+            url: `https://${queryURL}`
         }).then(data =>{
 
          saveApiCall(initCity,initState,queryURL,data);
@@ -91,7 +91,7 @@ function searchApiCall(city,state){
     }
 
     $.ajax({
-        url: `http://${queryURL}`
+        url: `https://${queryURL}`
     }).then(data =>{
         
         saveApiCall(city,state,queryURL,data);
@@ -169,7 +169,7 @@ function populateWeatherTab(location){
         }
 
         $.ajax({
-            url: `http://${queryURL}`
+            url: `https://${queryURL}`
         }).then(data =>{
             let dataDivContent = data.split('<d')
 
@@ -208,7 +208,7 @@ function populateWeatherTab(location){
 
         $.ajax({
 
-            url:`http://${queryURL}`
+            url:`https://${queryURL}`
 
         }).then( data =>{
     
