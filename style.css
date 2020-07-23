@@ -52,3 +52,11 @@ input.valid[type=text]:not(.browser-default){
     padding: .45rem;
     border-radius: 15%;
 }
+
+.row .fiveDay{
+    margin-top: 5%;
+}
+
+.dayTemp{
+    padding-right:2%;
+}

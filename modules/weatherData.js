@@ -247,11 +247,26 @@ function populateWeatherTab(location){
                 $(`#${name}-curData`).append(currentUvEl);
             }
             
-
-            let fiveDayCards = `<div class='row' id='${name}5day'></div>`;
+            //making 5-day forecast
+            let fiveDayCards = `<div class='row fiveDay' id='${name}5day'></div>`;
             $(`#${name}-current`).append(fiveDayCards);
 
-            for(let i=0; i<5; i++){
+            let nextDate;
+            let nextDateText;
+            for(let i=1; i<6; i++){
+                console.log(nextDateText)
+                nextDate = new Date(data.daily[i].dt*1000);
+                let mm = nextDate.getMonth()+1;
+                let dd = nextDate.getDate();
+                let yyyy =  nextDate.getFullYear();
+
+                nextDateText = `${mm}/${dd}/${yyyy}`;
+                let weatherCard = `<div class='col'><div style='color: #ffffff; 'class='card-panel blue' id='${name}-${mm}${dd}${yyyy}-card'></div></div>`;
+                $(`#${name}5day`).append(weatherCard);
+                $(`#${name}-${mm}${dd}${yyyy}-card`).append(`<h5>${nextDateText}</h5>`)
+                $(`#${name}-${mm}${dd}${yyyy}-card`).append(`<img src='http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}.png'>`);
+
+                $(`#${name}-${mm}${dd}${yyyy}-card`).append(`<p><span class='dayTemp' style='color:#ffffff;'>${data.daily[i].temp.day}&#x2109;</span><span style='color:#c0c0c0;'> ${data.daily[i].temp.night}&#x2109;</span></p>`)
 
             }
 
